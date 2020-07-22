@@ -8,11 +8,12 @@ public class Klass {
     private int number;
     private String displayName;
     private Student leader;
-    private List<Student> students = new ArrayList<>();
+    private List<Student> students;
 
     public Klass(int number) {
         this.number = number;
         this.displayName = "Class " + this.number;
+        this.students = new ArrayList<>();
     }
 
     public int getNumber() {
