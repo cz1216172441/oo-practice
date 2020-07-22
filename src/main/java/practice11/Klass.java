@@ -49,4 +49,8 @@ public class Klass extends Observable {
         notifyObservers(String.format(" I know %s has joined Class %d.", student.getName(), number));
     }
 
+    public boolean isIn(Student student) {
+        return student.getKlass() != null && number == student.getKlass().getNumber();
+    }
+
 }

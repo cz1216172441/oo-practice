@@ -41,18 +41,14 @@ public class Teacher extends Person implements Observer {
     }
 
     public boolean isTeaching(Student student) {
-        return isIn(student);
-    }
-
-    public boolean isIn(Student student) {
-        boolean isIn = false;
+        boolean isTeaching = false;
         for (Klass klass : classes) {
-            if (student.getKlass() != null && klass.getNumber() == student.getKlass().getNumber()) {
-                isIn = true;
+            if (klass.isIn(student)) {
+                isTeaching = true;
                 break;
             }
         }
-        return isIn;
+        return isTeaching;
     }
 
     public String introduceWith(Student student) {
